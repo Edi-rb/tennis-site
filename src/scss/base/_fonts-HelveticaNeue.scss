@@ -1,0 +1,45 @@
+/**
+ * ----------------------------------------
+ * font: helveticaNeue
+ * ----------------------------------------
+ */
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue/HelveticaNeue.woff') format('woff'),
+    url('../fonts/HelveticaNeue/HelveticaNeue.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue/HelveticaNeue.ttf') format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// @font-face {
+//     font-family: 'UniversNextforHSBC-bold';
+//     src: url('../fonts/hsbc/UniversNextforHSBC-Regular.woff') format('woff'),
+//     url('../fonts/hsbc/UniversNextforHSBC-Regular.woff2') format('woff2');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue/HelveticaNeue-Medium.woff') format('woff'),
+    url('../fonts/HelveticaNeue/HelveticaNeue-Medium.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue/HelveticaNeue-Medium.ttf') format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue/HelveticaNeuBold.woff') format('woff'),
+    url('../fonts/HelveticaNeue/HelveticaNeuBold.woff2') format('woff2'),
+    url('../fonts/HelveticaNeue/HelveticaNeuBold.ttf') format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

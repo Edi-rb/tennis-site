@@ -1,0 +1,72 @@
+$tst-accesories: '.tst-accesories';
+$bg-lighgray: #f3f4f8;
+
+#{$tst-accesories}{
+	background-color: $bg-lighgray;
+	display: grid;
+	&__item {
+		padding: 1.5rem 2rem;
+		text-align: center;
+		@include respond-to('md') {
+			padding: 3.375rem 1rem;
+			text-align: left;
+		}
+		@include respond-to('xl') {
+			padding: 4.375rem 2rem;
+		}
+	}
+	@include respond-to('md') {
+		grid-template-columns: 27% 45% 27%;
+	}
+	@include respond-to('lg') {
+		grid-template-columns: 28% 46% 26%;
+	}
+	@include respond-to('xxl') {
+		grid-template-columns: 30% 40% 30%;
+	}
+}
+
+$accesories: '.accesories';
+
+#{$accesories}{
+	&--type {
+		strong {
+			font-style: normal;
+			line-height: 3;
+			letter-spacing: 1.87px;
+		}
+		@include respond-to('md') {
+			text-align: right;
+		}
+	}
+	&--content {
+		color: var(--dark);
+		.title {
+			font-size: clamp(1rem, 4vw, 3.125rem);
+			font-weight: normal;
+			line-height: 1.14;
+  			letter-spacing: -0.06px;
+		    margin-bottom: 1.2rem;
+		    span {
+		    	display: inline-block;
+		    }
+		}
+		.description {
+			line-height: 1.78;
+			letter-spacing: 0.51px;
+			color: #787878;
+
+			@include respond-to('md') {
+				max-width: 24.375rem;
+			}
+		}
+	}
+	&--action {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		@include respond-to('md') {
+			justify-content: flex-start;
+		}
+	}
+}

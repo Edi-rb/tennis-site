@@ -1,0 +1,13 @@
+$fullsection: '.tst-fullbg';
+
+#{$fullsection}{
+	.responsive-img {
+		// height: 36.25rem;
+		width: 100%;
+		display: block;
+		// max-width: 100%;
+    	// height: auto;
+    	object-fit: cover;
+	}
+
+}

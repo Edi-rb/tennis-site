@@ -1,0 +1,251 @@
+$tennis-stmenu: '.tst-navmenu';
+
+#{$tennis-stmenu}{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    color: $fontwhite;
+
+    .btn-toggler {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
+        padding: 0.25rem 0.75rem;
+        font-size: 1.25rem;
+        line-height: 1;
+        .btn-icon {
+            display: inline-block;
+            width: 24px;
+            height: 17px;
+            background-image: none;
+            position: relative;
+            border-bottom: 2px solid $fontwhite;
+            transition: all .3s linear;
+            content: "";
+            background: 50%/100% 100% no-repeat;
+            border-color: $fontwhite;
+            &:before,
+            &:after {
+                width: 24px;
+                position: absolute;
+                height: 2px;
+                background-color: $fontwhite;
+                top: 0;
+                left: 0;
+                content: '';
+                z-index: 2;
+                transition: all .3s linear;
+            }
+            &:before {
+
+            }
+            &:after {
+                top: 8px;
+
+            }
+        }
+        &.collapsed {
+            background: red;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            .btn-icon {
+                border-color: transparent;
+                &:before {
+                    transform: translateY(8px) rotate(-45deg);
+                }
+                &:after {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        @include respond-to('md') {
+            display: none;
+        }
+    }
+    ul {
+    	list-style-type: none;
+        margin: 0;
+        display: list-item;
+        padding: 0;
+    }
+    &__navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 100%;
+        .navbar-brand {
+            position: relative;
+            @include respond-to('md') {
+                top: -0.6rem;
+            }
+        }
+        .navbar-collapse {
+            flex-basis: 100%;
+            flex-grow: 1;
+            display: none;
+            @include respond-to('md') {
+                flex-basis: auto;
+                display: block;
+                padding-left: 2.2rem;
+
+            }
+        }
+        .lang-name {
+            display: flex;
+            &__item {
+                .nav-link {
+                    color: $fontwhite;
+                    font-size: 0.813rem;
+                    letter-spacing: 1.14px;
+                    text-shadow: 1px 1px 2px var( --dark-two), 0 0 1em var( --dark-two), 0 0 0.2em var( --dark-two);
+                    @include respond-to('md') {
+                        text-shadow: initial;
+                    }
+                }
+                &.active {
+                    .nav-link {
+                        font-weight: bold;
+                        padding: 0.6rem 1rem
+                    }
+                }
+            }
+            @include respond-to('md') {
+                order: 4;
+            }
+        }
+        @include respond-to('md') {
+
+        }
+    }
+    @include respond-to('md') {
+        padding-top: 1rem;
+    }
+}
+
+.bg-whitemenu,
+.scroll-on {
+    background-color: rgba(255,255,255, 0.9);
+    .navbar-brand {
+        .cfill {
+            fill: var(--dark-two);
+        }
+    }
+    .navbarlist {
+        .navbarlist__item {
+            .nav-link {
+                color: var(--dark-two);
+                &:before {
+                    background-color:  var(--dark-two);
+                }
+            }
+        }
+    }
+    .lang-name {
+        .nav-link {
+            color: var(--dark-two);
+            text-shadow: unset;
+        }
+    }
+
+}
+.bg-whitemenu {
+    .navbar-collapse {
+        display: block;
+    }
+}
+.scroll-on  {
+    .header-navbar {
+        background-color: rgba(255,255,255, 0.9);
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .btn-toggler .btn-icon {
+        border-color: var(--dark-two);
+        &:before,
+        &:after {
+            background-color: var(--dark-two);
+        }
+    }
+    .lang-name {
+        .nav-link {
+            // text-shadow: 1px 1px 2px var( --dark-two), 0 0 1em var( --dark-two), 0 0 0.2em var( --dark-two);
+        }
+    }
+}
+
+
+$navbarlist: '.navbar-mn';
+
+#{$navbarlist}{
+    display: flex;
+    &__navbar {
+
+    }
+    .navbarlist {
+        display: flex;
+
+        flex-direction: column;
+        &__item {
+            // line-height: 1.5;
+            display: list-item;
+            .nav-link {
+                display: block;
+                color: $fontwhite;
+                font-family: 'HelveticaNeue';
+                font-weight: normal;
+                padding: 0.6rem 1.8rem;
+                letter-spacing: 0.088rem;
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    width: 16%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background-color: $fontwhite;
+                    transform: scaleX(0);
+                    transform-origin: top left;
+                    transition: transform .3s ease;
+                    @include respond-to('md') {
+                        left: 1.8rem;
+                        margin: 0;
+                    }
+                }
+                &:hover {
+                    &:before {
+                        transform: scaleX(1);
+                    }
+                }
+                @include respond-to('md') {
+                    padding: 0.6rem 0.9rem;
+                }
+                @include respond-to('xl') {
+                    padding: 0.6rem 1.8rem;
+                }
+            }
+            &.active {
+                .nav-link {
+                    font-weight: bold;
+                    &:before
+                    {
+                        transform: scaleX(1);
+                    }
+
+                }
+            }
+        }
+        @include respond-to('md') {
+            flex-direction: row;
+            margin-left: 2rem;
+        }
+    }
+}

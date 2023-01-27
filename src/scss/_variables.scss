@@ -1,0 +1,35 @@
+$fontwhite: #ffffff;
+$sickly-yellow: #cbe346;
+$black: #1e2335;
+$black-two: #2b3049;
+$font-family-primary: HelveticaNeue, sans-serif;
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+:root {
+  --dark: #{$black};
+  --dark-two: #{$black-two};
+  --sickly-yellow: #{$sickly-yellow};
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1440px;
+  --font-family-base: #{$font-family-primary};
+}
+
+
+
+$container: '.tns-container';
+
+#{$container}{
+  max-width: 100%;
+}

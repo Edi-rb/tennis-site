@@ -1,0 +1,29 @@
+$header-nav: '.header-navbar';
+
+#{$header-nav}{
+	padding: 1rem 2rem;
+	position: fixed;
+	width: 100%;
+	z-index: 3;
+	@include respond-to('md') {
+        padding: 1rem 5rem 1rem 2rem;
+    }
+}
+
+$full-banner: '.full-banner';
+
+#{$full-banner}{
+	display: flex;
+	position: relative;
+	.v-line {
+		background-color: $fontwhite;
+		display: none;
+		height: 100%;
+		position: absolute;
+		margin: 0 0 0 6.313rem;
+		width: 1px;
+		@include respond-to('lg') {
+			display: block;
+		}
+	}
+}
