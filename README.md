@@ -3,7 +3,7 @@
 
 This is a homepage for a site
 
-[More in documentation](https://my site)
+[More in documentation](https://edi-rb.github.io/tennis-store/)
 
-![bootstrapstarter](src/img/screenshot.png)
+![Site](src/assets/img/screenshot.png)
 
